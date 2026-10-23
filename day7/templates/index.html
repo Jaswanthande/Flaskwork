@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{%block title %}
+    <title>project SNM</title>
+{% endblock %}
+
+{%block content %}
+    <h1 style="color: red;">sanjay</h1>
+    <h2 style="color: rgb(244, 137, 6);">rocky</h2>
+    <h3>Welcome to index page</h3>
+    {% if d>3530 %}
+        <p>{{d}} is grater now</p>
+    {% elif d<3530 %}
+        <p>{{d}} is lesser</p>
+    {% else %}
+        <p>{{d}} is equal</p>
+    {% endif %}
+    {% if p %}
+        {% for student in p %}
+            <p>{{student.name}} is {{student.age}} years old and his id number is {{student.id}}</p>
+        {% endfor %}
+    {% endif %}
+    
+
+        
+    
+
+{% endblock %}
